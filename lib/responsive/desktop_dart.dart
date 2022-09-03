@@ -4,14 +4,9 @@ import 'package:tugas_akhir/detail_page.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:tugas_akhir/model/dataclass.dart';
 
-class DesktopScaffold extends StatefulWidget {
-  const DesktopScaffold({Key? key}) : super(key: key);
+class DesktopScafold extends StatelessWidget {
+  const DesktopScafold({Key? key}) : super(key: key);
 
-  @override
-  State<DesktopScaffold> createState() => _DesktopScaffoldState();
-}
-
-class _DesktopScaffoldState extends State<DesktopScaffold> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;

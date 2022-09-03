@@ -4,19 +4,13 @@ import 'package:tugas_akhir/detail_page.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:tugas_akhir/model/dataclass.dart';
 
-class TabletScaffold extends StatefulWidget {
-  const TabletScaffold({Key? key}) : super(key: key);
+class TabletScafold extends StatelessWidget {
+  const TabletScafold({Key? key}) : super(key: key);
 
-  @override
-  State<TabletScaffold> createState() => _TabletScaffoldState();
-}
-
-class _TabletScaffoldState extends State<TabletScaffold> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       backgroundColor: defaultBackgroundColor,
       appBar: myAppBar,

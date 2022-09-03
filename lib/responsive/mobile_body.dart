@@ -4,19 +4,13 @@ import 'package:tugas_akhir/detail_page.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:tugas_akhir/model/dataclass.dart';
 
-class MobileScaffold extends StatefulWidget {
-  const MobileScaffold({Key? key}) : super(key: key);
+class MobileScafold extends StatelessWidget {
+  const MobileScafold({Key? key}) : super(key: key);
 
-  @override
-  State<MobileScaffold> createState() => _MobileScaffoldState();
-}
-
-class _MobileScaffoldState extends State<MobileScaffold> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       backgroundColor: defaultBackgroundColor,
       appBar: myAppBar,
@@ -26,7 +20,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
         child: Column(
           children: [
             // first 4 boxes in grid
-            // Tampilan Untuk box abu2 tampilan mobile
+
             AspectRatio(
               aspectRatio: 2,
               child: CarouselSlider.builder(
