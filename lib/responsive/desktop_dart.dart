@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tugas_akhir/constants.dart';
 import 'package:tugas_akhir/detail_page.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:tugas_akhir/iconfav.dart';
 import 'package:tugas_akhir/model/dataclass.dart';
 
 class DesktopScafold extends StatelessWidget {
@@ -111,7 +112,12 @@ class DesktopScafold extends StatelessWidget {
                         itemBuilder: (context, index) {
                           final dataKereta train = dataKeretaList[index];
                           return InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return DetailScreen(train: train);
+                              }));
+                            },
                             child: Card(
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -144,38 +150,14 @@ class DesktopScafold extends StatelessWidget {
                                             style: const TextStyle(
                                                 fontSize: 12,
                                                 fontStyle: FontStyle.italic),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                top: 40.0),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.stretch,
-                                              children: [
-                                                ElevatedButton.icon(
-                                                  onPressed: () {
-                                                    Navigator.push(context,
-                                                        MaterialPageRoute(
-                                                            builder: (context) {
-                                                      return DetailScreen(
-                                                          train: train);
-                                                    }));
-                                                  },
-                                                  icon: const Icon(Icons.info),
-                                                  label: const Text('Detail'),
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                    primary:
-                                                        const Color.fromARGB(
-                                                            255, 6, 1, 102),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
+                                          )
                                         ],
                                       ),
                                     ),
+                                  ),
+                                  Stack(
+                                    alignment: AlignmentDirectional.bottomEnd,
+                                    children: const [FavoriteButton()],
                                   ),
                                 ],
                               ),

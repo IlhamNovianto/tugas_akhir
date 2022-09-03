@@ -40,9 +40,9 @@ var myDrawer = Drawer(
       Padding(
         padding: tilePadding,
         child: ListTile(
-          leading: const Icon(Icons.info, color: Colors.black),
+          leading: const Icon(Icons.favorite, color: Colors.black),
           title: Text(
-            'A B O U T',
+            'F A V O R I T E',
             style: drawerTextColor,
           ),
         ),
